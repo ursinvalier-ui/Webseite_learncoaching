@@ -5,39 +5,21 @@ Engeli) und **selbst entwickelte SVG-Illustrationen** (für die Themenseiten:
 Hausaufgaben, Prüfungsangst, Lernstrategien, Workshop, Vortrag, Philosophie) — siehe
 [`ILLUSTRATIONS.md`](./ILLUSTRATIONS.md) für das Illustrations-System.
 
-Die beiden echten Foto-Slots verwenden aktuell **generierte Platzhalter-Grafiken**
-(Quelle als `public/images/*.svg`, im Code eingebunden als `public/images/*.webp`)
-anstelle der echten Fotos der alten Website. Grund: Die Entwicklungsumgebung hatte
-keinen Netzwerkzugriff auf `lerncoaching-engeli.ch`, die Original-Bilder konnten daher
-nicht automatisch heruntergeladen werden. Die Platzhalter sind bewusst als solche
-gekennzeichnet (Beschriftung "Platzhalter · Foto ergänzen") und keine Stockfotos.
+## Vor Veröffentlichung: noch offen
 
-Neu generieren: `npm run generate:placeholders` (schreibt die `.svg`-Quellen; die im
-Code verwendeten `.webp`-Dateien danach z.B. mit `sharp` neu rendern).
+| Datei | Verwendet auf | Status |
+|---|---|---|
+| `hero-home.webp` | Startseite, Hero | ⏳ **generierte Platzhalter-Grafik** — ursprüngliche Quelle war `181112-cw-headerbild-adobestock_137250354-1920x1080-q82.jpg`; ⚠️ Dateiname enthält "adobestock" — **Lizenz vor Verwendung prüfen**, falls dieses Originalbild doch verwendet werden soll |
+| `portrait-seraina.webp` | Startseite ("Über mich") & Seite "Werdegang" | ✅ **echtes Foto eingesetzt** (von dir per GitHub-Upload bereitgestellt, optimiert als WebP) |
+| `og-default.jpg` | Social-Media-Vorschaubild (OpenGraph) | generierte Grafik, optional gegen ein echtes Foto/Logo-Motiv austauschbar |
 
-## Vor Veröffentlichung: echte Fotos einsetzen
+Neu generieren (nur noch für `hero-home` / `og-default` relevant):
+`npm run generate:placeholders` (schreibt die `.svg`-Quellen; die im Code verwendeten
+`.webp`-Dateien danach z.B. mit `sharp` neu rendern).
 
-Nur noch zwei Foto-Slots offen — Datei unter demselben Namen in `public/images/`
-ablegen (`.webp` oder `.jpg`, Pfad im jeweiligen `page.tsx` anpassen falls nötig):
-
-| Platzhalter-Datei | Verwendet auf | Ursprüngliche Quelle (alte Website) | Lizenzhinweis |
-|---|---|---|---|
-| `hero-home.webp` | Startseite, Hero | `181112-cw-headerbild-adobestock_137250354-1920x1080-q82.jpg` | ⚠️ Dateiname enthält "adobestock" — **Lizenz vor Verwendung prüfen** |
-| `portrait-seraina.webp` | Startseite ("Über mich") & Seite "Werdegang" | `csm_dsc_8955-480x721-q82_...webp` | Porträt, vermutlich eigenes Foto — **das von dir zugeschickte Foto ist bereit, sobald es hochgeladen ist (siehe unten)** |
-| `og-default.jpg` | Social-Media-Vorschaubild (OpenGraph) | — | neu, kein Ersatz für ein echtes Foto/Logo-Motiv nötig, aber optional austauschbar |
-
-Alle übrigen thematischen Seiten (Hausaufgaben Kinder/Jugendliche, Prüfungsangst,
-Lernstrategien, Workshop, Vortrag, Philosophie) verwenden jetzt **Illustrationen statt
+Alle thematischen Seiten (Hausaufgaben Kinder/Jugendliche, Prüfungsangst,
+Lernstrategien, Workshop, Vortrag, Philosophie) verwenden **Illustrationen statt
 Fotos** — kein Platzhalter-Foto mehr nötig, siehe `ILLUSTRATIONS.md`.
-
-### Porträtfoto von Seraina Engeli
-
-Du hast bereits ein Porträtfoto geschickt. Es konnte in dieser Sandbox nicht direkt
-gespeichert werden (kein Datei-Zugriff auf im Chat eingefügte Bilder). Bitte lade es
-selbst in den Ordner `public/images/` des Branches hoch (z.B. als
-`portrait-seraina-real.jpg` über die GitHub-Weboberfläche) und passe die beiden
-`<Image src="...">`-Verweise in `app/page.tsx` und
-`app/ueber-mich/werdegang/page.tsx` entsprechend an.
 
 ## Logo
 

@@ -57,13 +57,13 @@ function svg({ id, w, h, icon, seedA, seedB, label }) {
 </svg>`;
 }
 
-// Only the real-photo slots need a generated placeholder now — every
-// thematic content page (Hausaufgaben, Prüfungsangst, Lernstrategie,
+// Only the hero still needs a generated placeholder — the portrait is a
+// real photo now (public/images/portrait-seraina.webp, see MEDIA.md), and
+// every thematic content page (Hausaufgaben, Prüfungsangst, Lernstrategie,
 // Workshop, Vortrag, Philosophie …) uses a custom illustration from
-// components/illustrations/ instead of a photo. See MEDIA.md.
+// components/illustrations/ instead of a photo.
 const items = [
   { file: "hero-home", w: 1600, h: 1000, icon: ICONS.path, a: palette.petrol, b: palette.sageDark, label: "Platzhalter · Titelbild ergänzen" },
-  { file: "portrait-seraina", w: 800, h: 1000, icon: ICONS.portrait, a: palette.petrol, b: palette.terracotta, label: "Platzhalter · Porträt ergänzen" },
   { file: "og-default", w: 1200, h: 630, icon: ICONS.path, a: palette.petrol, b: palette.sageDark, label: "Lerncoaching Engeli" },
 ];
 
