@@ -4,6 +4,7 @@ import { PageHero } from "@/components/PageHero";
 import { ContentSection } from "@/components/ContentSection";
 import { TopicList } from "@/components/TopicList";
 import { CTASection } from "@/components/CTASection";
+import { HausaufgabenKinderIllustration } from "@/components/illustrations/HausaufgabenKinderIllustration";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -26,9 +27,7 @@ export default function HausaufgabenKinderPage() {
         ]}
       />
 
-      <ContentSection
-        image={{ src: "/images/hausaufgaben-kinder.webp", alt: "Kind bei den Hausaufgaben am eigenen Arbeitsplatz" }}
-      >
+      <ContentSection illustration={<HausaufgabenKinderIllustration />}>
         <p>
           Hausaufgaben empfinden viele Kinder als lästige Zusatzbeschäftigung. Sie haben so viele
           Ideen, was sie stattdessen tun könnten. Sie trödeln herum, sitzen gefrustet vor den

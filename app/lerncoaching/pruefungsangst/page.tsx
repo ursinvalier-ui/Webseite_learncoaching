@@ -4,6 +4,7 @@ import { ContentSection } from "@/components/ContentSection";
 import { QuoteBlock } from "@/components/QuoteBlock";
 import { TopicList } from "@/components/TopicList";
 import { CTASection } from "@/components/CTASection";
+import { PruefungsangstIllustration } from "@/components/illustrations/PruefungsangstIllustration";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -26,9 +27,7 @@ export default function PruefungsangstPage() {
         ]}
       />
 
-      <ContentSection
-        image={{ src: "/images/pruefungsangst.webp", alt: "Ruhiger Moment vor einer Prüfungssituation" }}
-      >
+      <ContentSection illustration={<PruefungsangstIllustration />}>
         <p>
           Nervosität vor Prüfungen ist eigentlich nützlich, da sie die Sauerstoffversorgung
           ankurbelt und dadurch die Denkleistung verbessert. Doch verschiedene Faktoren können

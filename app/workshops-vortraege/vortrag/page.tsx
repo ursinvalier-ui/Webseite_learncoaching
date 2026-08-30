@@ -3,6 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { ContentSection } from "@/components/ContentSection";
 import { IconCheck } from "@/components/icons";
 import { CTASection } from "@/components/CTASection";
+import { VortragIllustration } from "@/components/illustrations/VortragIllustration";
 import { siteConfig } from "@/lib/site-config";
 import { buildMetadata } from "@/lib/seo";
 
@@ -39,7 +40,7 @@ export default function VortragPage() {
         ]}
       />
 
-      <ContentSection image={{ src: "/images/vortrag.webp", alt: "Vortrag für Eltern und Lehrpersonen" }}>
+      <ContentSection illustration={<VortragIllustration />}>
         <p>
           Eltern und Lehrkräfte wünschen sich, dass Kinder eine glückliche Schulzeit erleben. Wir
           möchten, dass sie das Lernen als etwas Sinnvolles und Schönes begreifen, im Unterricht

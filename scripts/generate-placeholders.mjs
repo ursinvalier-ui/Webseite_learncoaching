@@ -57,19 +57,12 @@ function svg({ id, w, h, icon, seedA, seedB, label }) {
 </svg>`;
 }
 
+// Only the real-photo slots need a generated placeholder now — every
+// thematic content page (Hausaufgaben, Prüfungsangst, Lernstrategie,
+// Workshop, Vortrag, Philosophie …) uses a custom illustration from
+// components/illustrations/ instead of a photo. See MEDIA.md.
 const items = [
   { file: "hero-home", w: 1600, h: 1000, icon: ICONS.path, a: palette.petrol, b: palette.sageDark, label: "Platzhalter · Titelbild ergänzen" },
-  { file: "teaser-hausaufgaben", w: 800, h: 600, icon: ICONS.backpack, a: palette.terracotta, b: palette.petrol, label: "Platzhalter · Foto ergänzen" },
-  { file: "teaser-pruefungsangst", w: 800, h: 600, icon: ICONS.heart, a: palette.sageDark, b: palette.petrol, label: "Platzhalter · Foto ergänzen" },
-  { file: "teaser-lernstrategie", w: 800, h: 600, icon: ICONS.bulb, a: palette.petrol, b: palette.terracotta, label: "Platzhalter · Foto ergänzen" },
-  { file: "hausaufgaben-kinder", w: 900, h: 700, icon: ICONS.backpack, a: palette.terracotta, b: palette.petrol, label: "Platzhalter · Foto ergänzen" },
-  { file: "hausaufgaben-jugendliche", w: 900, h: 700, icon: ICONS.bulb, a: palette.petrol, b: palette.sageDark, label: "Platzhalter · Foto ergänzen" },
-  { file: "pruefungsangst", w: 900, h: 700, icon: ICONS.heart, a: palette.sageDark, b: palette.terracotta, label: "Platzhalter · Foto ergänzen" },
-  { file: "lernstrategie", w: 900, h: 700, icon: ICONS.book, a: palette.petrol, b: palette.terracotta, label: "Platzhalter · Foto ergänzen" },
-  { file: "ablauf-kosten", w: 900, h: 700, icon: ICONS.compass, a: palette.terracotta, b: palette.sageDark, label: "Platzhalter · Foto ergänzen" },
-  { file: "workshop", w: 900, h: 700, icon: ICONS.group, a: palette.petrol, b: palette.terracotta, label: "Platzhalter · Foto ergänzen" },
-  { file: "vortrag", w: 900, h: 700, icon: ICONS.podium, a: palette.sageDark, b: palette.petrol, label: "Platzhalter · Foto ergänzen" },
-  { file: "philosophie", w: 900, h: 700, icon: ICONS.quote, a: palette.petrol, b: palette.sageDark, label: "Platzhalter · Foto ergänzen" },
   { file: "portrait-seraina", w: 800, h: 1000, icon: ICONS.portrait, a: palette.petrol, b: palette.terracotta, label: "Platzhalter · Porträt ergänzen" },
   { file: "og-default", w: 1200, h: 630, icon: ICONS.path, a: palette.petrol, b: palette.sageDark, label: "Lerncoaching Engeli" },
 ];

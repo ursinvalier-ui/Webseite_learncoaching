@@ -3,6 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { ContentSection } from "@/components/ContentSection";
 import { QuoteBlock } from "@/components/QuoteBlock";
 import { CTASection } from "@/components/CTASection";
+import { PhilosophieIllustration } from "@/components/illustrations/PhilosophieIllustration";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -35,7 +36,7 @@ export default function PhilosophiePage() {
       <ContentSection
         eyebrow="Worum es beim Lernen geht"
         title="So einzigartig wie ein Fingerabdruck"
-        image={{ src: "/images/philosophie.webp", alt: "Symbolbild: individueller Lernweg" }}
+        illustration={<PhilosophieIllustration />}
         imageSide="left"
       >
         <p>

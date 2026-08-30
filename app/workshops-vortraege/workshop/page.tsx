@@ -4,6 +4,7 @@ import { ContentSection } from "@/components/ContentSection";
 import { PricingCard } from "@/components/PricingCard";
 import { IconCheck, IconMapPin } from "@/components/icons";
 import { CTASection } from "@/components/CTASection";
+import { WorkshopIllustration } from "@/components/illustrations/WorkshopIllustration";
 import { siteConfig } from "@/lib/site-config";
 import { buildMetadata } from "@/lib/seo";
 
@@ -51,7 +52,7 @@ export default function WorkshopPage() {
         ]}
       />
 
-      <ContentSection image={{ src: "/images/workshop.webp", alt: "Kinder lernen gemeinsam im Workshop" }}>
+      <ContentSection illustration={<WorkshopIllustration />}>
         <p>
           Wenn die Menge der Hausaufgaben von Schuljahr zu Schuljahr zunimmt und Kinder immer mehr
           Schulfächer und Prüfungen bewältigen müssen, stossen viele Schülerinnen und Schüler mit

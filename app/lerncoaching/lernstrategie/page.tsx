@@ -3,6 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { ContentSection } from "@/components/ContentSection";
 import { TopicList } from "@/components/TopicList";
 import { CTASection } from "@/components/CTASection";
+import { LernstrategieIllustration } from "@/components/illustrations/LernstrategieIllustration";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -25,9 +26,7 @@ export default function LernstrategiePage() {
         ]}
       />
 
-      <ContentSection
-        image={{ src: "/images/lernstrategie.webp", alt: "Strukturierte Lernunterlagen und Notizen" }}
-      >
+      <ContentSection illustration={<LernstrategieIllustration />}>
         <p>
           Manchmal lernen Kinder und Jugendliche stundenlang, doch der Prüfungserfolg bleibt aus.
           Woran kann das liegen? Möglich ist, dass sie das Falsche lernen, sich in Details

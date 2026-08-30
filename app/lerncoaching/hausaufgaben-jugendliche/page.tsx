@@ -4,6 +4,7 @@ import { PageHero } from "@/components/PageHero";
 import { ContentSection } from "@/components/ContentSection";
 import { TopicList } from "@/components/TopicList";
 import { CTASection } from "@/components/CTASection";
+import { HausaufgabenJugendlicheIllustration } from "@/components/illustrations/HausaufgabenJugendlicheIllustration";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -26,9 +27,7 @@ export default function HausaufgabenJugendlichePage() {
         ]}
       />
 
-      <ContentSection
-        image={{ src: "/images/hausaufgaben-jugendliche.webp", alt: "Jugendlicher beim Lernen" }}
-      >
+      <ContentSection illustration={<HausaufgabenJugendlicheIllustration />}>
         <p>
           Kennst du das? Du musst die Hausaufgaben erledigen, doch deine Motivation weilt gerade
           in den Ferien. Dauernd verzögerst du den Start, chattest mit Freunden oder gamst eine

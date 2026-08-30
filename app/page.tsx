@@ -8,6 +8,8 @@ import { ComparisonTable } from "@/components/ComparisonTable";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { PricingCard } from "@/components/PricingCard";
 import { QuoteBlock } from "@/components/QuoteBlock";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { GrowthPathIllustration } from "@/components/illustrations/GrowthPathIllustration";
 import { IconBackpack, IconBulb, IconGroup, IconHeart } from "@/components/icons";
 import { buildMetadata } from "@/lib/seo";
 
@@ -83,50 +85,57 @@ export default function HomePage() {
       {/* Vertrauensbereich */}
       <section className="border-y border-line bg-canvas-alt">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-          <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {trustItems.map((item) => (
-              <li key={item} className="flex items-center gap-3 text-sm font-medium text-petrol">
-                <span className="h-2 w-2 shrink-0 rounded-full bg-terracotta-strong" aria-hidden="true" />
-                {item}
-              </li>
-            ))}
-          </ul>
+          <ScrollReveal>
+            <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {trustItems.map((item) => (
+                <li key={item} className="flex items-center gap-3 text-sm font-medium text-petrol">
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-terracotta-strong" aria-hidden="true" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Empathie-Sektion */}
       <section className="bg-canvas">
         <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl">Kommt Ihnen das bekannt vor?</h2>
+          <ScrollReveal>
+            <h2 className="text-3xl sm:text-4xl">Kommt Ihnen das bekannt vor?</h2>
+          </ScrollReveal>
           <div className="mx-auto mt-8 grid gap-4 sm:grid-cols-2">
-            {empathyQuestions.map((q) => (
-              <p
-                key={q}
-                className="rounded-card border border-line bg-surface px-6 py-5 text-base font-medium text-petrol"
-              >
-                {q}
-              </p>
+            {empathyQuestions.map((q, i) => (
+              <ScrollReveal key={q} delayMs={i * 90}>
+                <p className="rounded-card border border-line bg-surface px-6 py-5 text-base font-medium text-petrol">
+                  {q}
+                </p>
+              </ScrollReveal>
             ))}
           </div>
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-ink-soft">
-            Lernen lässt sich verändern. Gemeinsam finden wir heraus, was hinter den
-            Schwierigkeiten steckt und welche Strategien wirklich helfen.
-          </p>
+          <ScrollReveal delayMs={200}>
+            <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-ink-soft">
+              Lernen lässt sich verändern. Gemeinsam finden wir heraus, was hinter den
+              Schwierigkeiten steckt und welche Strategien wirklich helfen.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Angebote */}
       <section className="bg-canvas-alt">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
+          <ScrollReveal className="max-w-2xl">
             <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
               Coaching-Themen
             </p>
             <h2 className="text-3xl sm:text-4xl">Wobei ich unterstütze</h2>
-          </div>
+          </ScrollReveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {offers.map((offer) => (
-              <ServiceCard key={offer.title} {...offer} />
+            {offers.map((offer, i) => (
+              <ScrollReveal key={offer.title} delayMs={i * 90}>
+                <ServiceCard {...offer} />
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -135,16 +144,9 @@ export default function HomePage() {
       {/* Was Lerncoaching bedeutet */}
       <section className="bg-canvas">
         <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-card shadow-soft">
-            <Image
-              src="/images/teaser-lernstrategie.webp"
-              alt="Symbolbild: gemeinsam neue Lernwege entdecken"
-              fill
-              loading="lazy"
-              sizes="(min-width: 1024px) 46vw, 90vw"
-              className="object-cover"
-            />
-          </div>
+          <ScrollReveal direction="none" className="relative aspect-[4/3] overflow-hidden rounded-card">
+            <GrowthPathIllustration />
+          </ScrollReveal>
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
               Was Lerncoaching für mich bedeutet
@@ -165,13 +167,13 @@ export default function HomePage() {
       {/* Lerncoaching vs. Nachhilfe */}
       <section className="bg-canvas-alt">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
+          <ScrollReveal className="max-w-2xl">
             <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
               Der Unterschied
             </p>
             <h2 className="text-3xl sm:text-4xl">Lerncoaching ist keine klassische Nachhilfe</h2>
-          </div>
-          <div className="mt-10">
+          </ScrollReveal>
+          <ScrollReveal delayMs={150} className="mt-10">
             <ComparisonTable
               columns={[
                 {
@@ -190,7 +192,7 @@ export default function HomePage() {
                 },
               ]}
             />
-          </div>
+          </ScrollReveal>
           <p className="mt-8 max-w-2xl text-sm text-ink-soft">
             Mehr zum Ablauf und den Konditionen:{" "}
             <Link href="/lerncoaching/ablauf-kosten" className="font-semibold text-petrol underline">
@@ -228,7 +230,7 @@ export default function HomePage() {
               className="object-cover"
             />
           </div>
-          <div>
+          <ScrollReveal>
             <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
               Über mich
             </p>
@@ -247,34 +249,38 @@ export default function HomePage() {
                 <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.6" fill="none" strokeLinecap="round" />
               </svg>
             </Link>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Workshop & Vortrag */}
       <section className="bg-canvas">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
+          <ScrollReveal className="max-w-2xl">
             <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
               Für Gruppen
             </p>
             <h2 className="text-3xl sm:text-4xl">Workshops & Vorträge</h2>
-          </div>
+          </ScrollReveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            <ServiceCard
-              icon={<IconGroup className="h-6 w-6" />}
-              title="Workshop «Clever lernen»"
-              description="Für Kinder zwischen 11 und 13 Jahren: verstehen, wie das Gehirn lernt, und effektivere Lernstrategien einüben."
-              href="/workshops-vortraege/workshop"
-              ctaLabel="Workshop entdecken"
-            />
-            <ServiceCard
-              icon={<IconGroup className="h-6 w-6" />}
-              title="Vortrag «Mit Kindern lernen»"
-              description="Für Eltern, Lehrpersonen und Bildungseinrichtungen: praxisnahe Antworten auf die häufigsten Fragen rund ums Lernen."
-              href="/workshops-vortraege/vortrag"
-              ctaLabel="Vortrag entdecken"
-            />
+            <ScrollReveal>
+              <ServiceCard
+                icon={<IconGroup className="h-6 w-6" />}
+                title="Workshop «Clever lernen»"
+                description="Für Kinder zwischen 11 und 13 Jahren: verstehen, wie das Gehirn lernt, und effektivere Lernstrategien einüben."
+                href="/workshops-vortraege/workshop"
+                ctaLabel="Workshop entdecken"
+              />
+            </ScrollReveal>
+            <ScrollReveal delayMs={90}>
+              <ServiceCard
+                icon={<IconGroup className="h-6 w-6" />}
+                title="Vortrag «Mit Kindern lernen»"
+                description="Für Eltern, Lehrpersonen und Bildungseinrichtungen: praxisnahe Antworten auf die häufigsten Fragen rund ums Lernen."
+                href="/workshops-vortraege/vortrag"
+                ctaLabel="Vortrag entdecken"
+              />
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -283,7 +289,7 @@ export default function HomePage() {
       <section className="bg-canvas-alt">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:items-center">
-            <div>
+            <ScrollReveal>
               <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
                 Transparent
               </p>
@@ -300,17 +306,19 @@ export default function HomePage() {
                   <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.6" fill="none" strokeLinecap="round" />
                 </svg>
               </Link>
-            </div>
-            <PricingCard
-              title="Lerncoaching"
-              price="CHF 120"
-              unit="/ 60 Minuten"
-              details={[
-                "Vor- und Nachbereitung inklusive",
-                "Kurze Telefongespräche bis 10 Min. inklusive",
-                "Absage bitte mind. 24 Std. im Voraus",
-              ]}
-            />
+            </ScrollReveal>
+            <ScrollReveal delayMs={150} direction="none">
+              <PricingCard
+                title="Lerncoaching"
+                price="CHF 120"
+                unit="/ 60 Minuten"
+                details={[
+                  "Vor- und Nachbereitung inklusive",
+                  "Kurze Telefongespräche bis 10 Min. inklusive",
+                  "Absage bitte mind. 24 Std. im Voraus",
+                ]}
+              />
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -318,16 +326,18 @@ export default function HomePage() {
       {/* Philosophie */}
       <section className="bg-canvas">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <QuoteBlock
-            quote="Auch der weiteste Weg beginnt mit einem ersten Schritt."
-            cite="Konfuzius"
-          />
-          <p className="mt-8 text-center text-base leading-relaxed text-ink-soft">
-            Jeder Mensch lernt anders – so einzigartig wie ein Fingerabdruck.{" "}
-            <Link href="/ueber-mich/philosophie" className="font-semibold text-petrol underline">
-              Mehr zur Philosophie
-            </Link>
-          </p>
+          <ScrollReveal>
+            <QuoteBlock
+              quote="Auch der weiteste Weg beginnt mit einem ersten Schritt."
+              cite="Konfuzius"
+            />
+            <p className="mt-8 text-center text-base leading-relaxed text-ink-soft">
+              Jeder Mensch lernt anders – so einzigartig wie ein Fingerabdruck.{" "}
+              <Link href="/ueber-mich/philosophie" className="font-semibold text-petrol underline">
+                Mehr zur Philosophie
+              </Link>
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
