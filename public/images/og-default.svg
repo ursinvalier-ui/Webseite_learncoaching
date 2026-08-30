@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Lerncoaching Engeli">
   <defs>
     <linearGradient id="g-og-default" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#24413c"/>
-      <stop offset="100%" stop-color="#4c6b54"/>
+      <stop offset="0%" stop-color="#4a1e45"/>
+      <stop offset="100%" stop-color="#6b4770"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#g-og-default)"/>
   <circle cx="983.9999999999999" cy="113.39999999999999" r="201.6" fill="#faf6ee" opacity="0.18"/>
-  <circle cx="144" cy="554.4" r="138.6" fill="#24413c" opacity="0.08"/>
+  <circle cx="144" cy="554.4" r="138.6" fill="#4a1e45" opacity="0.08"/>
   <g transform="translate(600, 315)" color="#faf6ee" opacity="0.85">
     <g transform="scale(4.846153846153846)"><path d="M-30,24 Q-10,-24 0,0 Q10,24 30,-24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="-30" cy="24" r="4" fill="currentColor"/><circle cx="30" cy="-24" r="4" fill="currentColor"/></g>
   </g>
   <g transform="translate(24, 606)">
-    <rect x="0" y="-28" width="149.39999999999998" height="28" rx="14" fill="#1a302c" opacity="0.82"/>
+    <rect x="0" y="-28" width="149.39999999999998" height="28" rx="14" fill="#341530" opacity="0.82"/>
     <text x="12" y="-9" font-family="Inter, sans-serif" font-size="12" fill="#faf6ee" letter-spacing="0.02em">Lerncoaching Engeli</text>
   </g>
 </svg>

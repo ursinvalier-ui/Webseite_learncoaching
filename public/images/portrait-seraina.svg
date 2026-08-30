@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Platzhalter · Porträt ergänzen">
   <defs>
     <linearGradient id="g-portrait-seraina" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#24413c"/>
+      <stop offset="0%" stop-color="#4a1e45"/>
       <stop offset="100%" stop-color="#c97c4b"/>
     </linearGradient>
   </defs>
   <rect width="800" height="1000" fill="url(#g-portrait-seraina)"/>
   <circle cx="656" cy="180" r="256" fill="#faf6ee" opacity="0.18"/>
-  <circle cx="96" cy="880" r="176" fill="#24413c" opacity="0.08"/>
+  <circle cx="96" cy="880" r="176" fill="#4a1e45" opacity="0.08"/>
   <g transform="translate(400, 500)" color="#faf6ee" opacity="0.85">
     <g transform="scale(6.153846153846154)"><circle cx="0" cy="-14" r="16" fill="none" stroke="currentColor" stroke-width="3"/><path d="M-26,30 q0,-24 26,-24 q26,0 26,24" fill="none" stroke="currentColor" stroke-width="3"/></g>
   </g>
   <g transform="translate(24, 976)">
-    <rect x="0" y="-28" width="222" height="28" rx="14" fill="#1a302c" opacity="0.82"/>
+    <rect x="0" y="-28" width="222" height="28" rx="14" fill="#341530" opacity="0.82"/>
     <text x="12" y="-9" font-family="Inter, sans-serif" font-size="12" fill="#faf6ee" letter-spacing="0.02em">Platzhalter · Porträt ergänzen</text>
   </g>
 </svg>

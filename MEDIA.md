@@ -34,11 +34,18 @@ Für jeden Platzhalter unten die echte Datei unter demselben Dateinamen (`.webp`
 
 ## Logo
 
-Es lag keine herunterladbare Logo-Datei vor (`logo.svg` / `logo-inverted.svg` auf der
-alten Website nicht erreichbar). Die neue Website verwendet daher aktuell ein
-**Text-Wortmarke-Logo** (`components/Logo.tsx`, kein Bild-Asset), gesetzt in der
-Display-Schrift der Website. Sobald ein echtes Logo vorliegt, `components/Logo.tsx`
-entsprechend durch ein `<Image>` ersetzen.
+Das echte Logo (Feder-Symbol in Aubergine/Pflaume + "Lerncoaching" / "Engeli") wurde
+als Bild bereitgestellt und in `components/Logo.tsx` als SVG **nachgezeichnet** (keine
+Bilddatei, da nur ein Screenshot/PNG vorlag, kein Vektor-Original). Die Nachzeichnung
+kommt dem Original sehr nahe, ist aber keine exakte 1:1-Kopie. **Sobald das
+Original-Logo als Vektordatei (SVG/AI/EPS) verfügbar ist, `components/Logo.tsx`
+entsprechend ersetzen** (Pfaddaten `FEATHER_PATH` / `FEATHER_SPINE` bzw. direkt durch
+ein `<Image>`-Element mit der echten Datei austauschen).
+
+Die gesamte Farbpalette der Website (`app/globals.css`, Token `--color-petrol` etc.)
+wurde von diesem Logo abgeleitet: Aubergine/Pflaume (#4a1e45) als Primärfarbe statt
+des ursprünglichen Platzhalter-Grüns. Alle Kontrastwerte wurden erneut gegen WCAG AA
+geprüft (0 axe-core-Verstösse).
 
 ## Bilder mit Adobe-Stock-Verdacht
 

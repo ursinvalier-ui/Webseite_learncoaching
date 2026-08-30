@@ -2,17 +2,17 @@
   <defs>
     <linearGradient id="g-ablauf-kosten" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#c97c4b"/>
-      <stop offset="100%" stop-color="#4c6b54"/>
+      <stop offset="100%" stop-color="#6b4770"/>
     </linearGradient>
   </defs>
   <rect width="900" height="700" fill="url(#g-ablauf-kosten)"/>
   <circle cx="738" cy="126" r="224" fill="#faf6ee" opacity="0.18"/>
-  <circle cx="108" cy="616" r="154" fill="#24413c" opacity="0.08"/>
+  <circle cx="108" cy="616" r="154" fill="#4a1e45" opacity="0.08"/>
   <g transform="translate(450, 350)" color="#faf6ee" opacity="0.85">
     <g transform="scale(5.384615384615385)"><circle cx="0" cy="0" r="34" fill="none" stroke="currentColor" stroke-width="3"/><path d="M-14,14 L6,-4 L14,-14 L-6,4 Z" fill="currentColor" opacity="0.85"/><circle cx="0" cy="0" r="3" fill="currentColor"/></g>
   </g>
   <g transform="translate(24, 676)">
-    <rect x="0" y="-28" width="202.2" height="28" rx="14" fill="#1a302c" opacity="0.82"/>
+    <rect x="0" y="-28" width="202.2" height="28" rx="14" fill="#341530" opacity="0.82"/>
     <text x="12" y="-9" font-family="Inter, sans-serif" font-size="12" fill="#faf6ee" letter-spacing="0.02em">Platzhalter · Foto ergänzen</text>
   </g>
 </svg>
