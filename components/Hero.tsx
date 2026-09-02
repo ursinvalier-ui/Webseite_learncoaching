@@ -14,7 +14,13 @@ type HeroProps = {
 // Splits the title on the first occurrence of `underlineWord` so it can be
 // wrapped with a hand-drawn ink stroke — the same pen that "signs" the
 // visual on the right, tying the two together.
-function TitleWithStroke({ title, underlineWord }: { title: string; underlineWord?: string }) {
+function TitleWithStroke({
+  title,
+  underlineWord,
+}: {
+  title: string;
+  underlineWord?: string;
+}) {
   if (!underlineWord) return <>{title}</>;
   const index = title.indexOf(underlineWord);
   if (index === -1) return <>{title}</>;
@@ -54,14 +60,16 @@ export function Hero({
   secondaryCta,
 }: HeroProps) {
   return (
-    <section className="relative overflow-hidden bg-canvas">
+    <section className="relative overflow-hidden">
       <div className="mx-auto grid max-w-6xl items-center gap-16 px-4 py-16 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:py-24 lg:px-8">
         <div className="animate-fade-up">
           {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
           <h1 className="text-4xl leading-[1.15] sm:text-5xl lg:text-[3.6rem]">
             <TitleWithStroke title={title} underlineWord={underlineWord} />
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">{description}</p>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
+            {description}
+          </p>
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <Link
               href={primaryCta.href}
