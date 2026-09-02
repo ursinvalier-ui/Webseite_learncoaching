@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ArrowLink } from "@/components/ArrowLink";
+import { Eyebrow } from "@/components/Eyebrow";
 import { Hero } from "@/components/Hero";
 import { ServiceCard } from "@/components/ServiceCard";
 import { CTASection } from "@/components/CTASection";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { PricingCard } from "@/components/PricingCard";
-import { QuoteBlock } from "@/components/QuoteBlock";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { GrowthPathIllustration } from "@/components/illustrations/GrowthPathIllustration";
 import { IconBackpack, IconBulb, IconGroup, IconHeart } from "@/components/icons";
@@ -28,10 +29,10 @@ const trustItems = [
 ];
 
 const empathyQuestions = [
-  "Hausaufgaben werden jeden Abend zum Kampf?",
-  "Die Motivation fehlt?",
-  "Trotz langem Lernen bleibt der Erfolg aus?",
-  "Prüfungen lösen Stress oder Angst aus?",
+  { text: "Hausaufgaben werden jeden Abend zum Kampf?", tilt: "sm:-rotate-2" },
+  { text: "Die Motivation fehlt?", tilt: "sm:rotate-1" },
+  { text: "Trotz langem Lernen bleibt der Erfolg aus?", tilt: "sm:-rotate-1" },
+  { text: "Prüfungen lösen Stress oder Angst aus?", tilt: "sm:rotate-2" },
 ];
 
 const offers = [
@@ -76,10 +77,10 @@ export default function HomePage() {
       <Hero
         eyebrow="Lerncoaching in Chur"
         title="Lernen darf leichter werden."
+        underlineWord="leichter"
         description="Lerncoaching für Kinder, Jugendliche und Eltern in Chur – individuell, wertschätzend und praxisnah."
         primaryCta={{ label: "Unverbindlich Kontakt aufnehmen", href: "/ueber-uns/kontakt" }}
         secondaryCta={{ label: "Lerncoaching entdecken", href: "/uebersicht-hausaufgaben" }}
-        image={{ src: "/images/hero-home.webp", alt: "Seraina Engeli im Coaching-Gespräch" }}
       />
 
       {/* Vertrauensbereich */}
@@ -104,11 +105,13 @@ export default function HomePage() {
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl">Kommt Ihnen das bekannt vor?</h2>
           </ScrollReveal>
-          <div className="mx-auto mt-8 grid gap-4 sm:grid-cols-2">
+          <div className="mx-auto mt-10 grid gap-5 sm:grid-cols-2">
             {empathyQuestions.map((q, i) => (
-              <ScrollReveal key={q} delayMs={i * 90}>
-                <p className="rounded-card border border-line bg-surface px-6 py-5 text-base font-medium text-petrol">
-                  {q}
+              <ScrollReveal key={q.text} delayMs={i * 90}>
+                <p
+                  className={`rounded-card border border-line bg-surface px-6 py-5 text-base font-medium text-petrol shadow-soft transition-transform hover:rotate-0 ${q.tilt}`}
+                >
+                  {q.text}
                 </p>
               </ScrollReveal>
             ))}
@@ -126,9 +129,7 @@ export default function HomePage() {
       <section className="bg-canvas-alt">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <ScrollReveal className="max-w-2xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
-              Coaching-Themen
-            </p>
+            <Eyebrow>Coaching-Themen</Eyebrow>
             <h2 className="text-3xl sm:text-4xl">Wobei ich unterstütze</h2>
           </ScrollReveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -148,9 +149,7 @@ export default function HomePage() {
             <GrowthPathIllustration />
           </ScrollReveal>
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
-              Was Lerncoaching für mich bedeutet
-            </p>
+            <Eyebrow>Was Lerncoaching für mich bedeutet</Eyebrow>
             <h2 className="text-3xl sm:text-4xl">Mut und Freude am Lernen behalten</h2>
             <p className="mt-5 text-lg leading-relaxed text-ink-soft">
               Lernende ein Stück auf ihrem Lernweg begleiten und beraten zu dürfen, bereitet mir
@@ -159,7 +158,7 @@ export default function HomePage() {
               gezielt und positiv beeinflussen können – selbst wenn die Motivation hin und wieder
               durch Abwesenheit glänzt.
             </p>
-            <p className="mt-6 text-sm font-medium text-petrol">— Seraina Engeli</p>
+            <p className="mt-5 font-hand text-2xl text-petrol">— Seraina Engeli</p>
           </div>
         </div>
       </section>
@@ -168,9 +167,7 @@ export default function HomePage() {
       <section className="bg-canvas-alt">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <ScrollReveal className="max-w-2xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
-              Der Unterschied
-            </p>
+            <Eyebrow>Der Unterschied</Eyebrow>
             <h2 className="text-3xl sm:text-4xl">Lerncoaching ist keine klassische Nachhilfe</h2>
           </ScrollReveal>
           <ScrollReveal delayMs={150} className="mt-10">
@@ -206,9 +203,7 @@ export default function HomePage() {
       <section className="bg-canvas">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
-              Ablauf
-            </p>
+            <Eyebrow>Ablauf</Eyebrow>
             <h2 className="text-3xl sm:text-4xl">So funktioniert das Coaching</h2>
           </div>
           <div className="mt-12">
@@ -231,24 +226,16 @@ export default function HomePage() {
             />
           </div>
           <ScrollReveal>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
-              Über mich
-            </p>
+            <Eyebrow>Über mich</Eyebrow>
             <h2 className="text-3xl sm:text-4xl">Seraina Engeli</h2>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
               Primarlehrerin, Mutter zweier schulpflichtiger Söhne und ausgebildeter Lerncoach –
               mit langjähriger Unterrichtserfahrung auf verschiedenen Schulstufen und einer
               Ausbildung an der Lernakademie für Lerncoaching in Zürich.
             </p>
-            <Link
-              href="/ueber-mich/werdegang"
-              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta-text"
-            >
+            <ArrowLink href="/ueber-mich/werdegang" className="mt-6">
               Werdegang lesen
-              <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.6" fill="none" strokeLinecap="round" />
-              </svg>
-            </Link>
+            </ArrowLink>
           </ScrollReveal>
         </div>
       </section>
@@ -257,9 +244,7 @@ export default function HomePage() {
       <section className="bg-canvas">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <ScrollReveal className="max-w-2xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
-              Für Gruppen
-            </p>
+            <Eyebrow>Für Gruppen</Eyebrow>
             <h2 className="text-3xl sm:text-4xl">Workshops & Vorträge</h2>
           </ScrollReveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -290,22 +275,14 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:items-center">
             <ScrollReveal>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
-                Transparent
-              </p>
+              <Eyebrow>Transparent</Eyebrow>
               <h2 className="text-3xl sm:text-4xl">Konditionen</h2>
               <p className="mt-5 max-w-md text-lg leading-relaxed text-ink-soft">
                 Klar und ohne Überraschungen – alle Details zu Dauer, Kosten und Absagefristen.
               </p>
-              <Link
-                href="/lerncoaching/ablauf-kosten"
-                className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta-text"
-              >
+              <ArrowLink href="/lerncoaching/ablauf-kosten" className="mt-6">
                 Ablauf & Kosten ansehen
-                <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.6" fill="none" strokeLinecap="round" />
-                </svg>
-              </Link>
+              </ArrowLink>
             </ScrollReveal>
             <ScrollReveal delayMs={150} direction="none">
               <PricingCard
@@ -323,20 +300,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Philosophie */}
-      <section className="bg-canvas">
-        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+      {/* Philosophie — the one solid-ink break on the page */}
+      <section className="bg-petrol">
+        <div className="mx-auto max-w-3xl px-4 py-20 text-center sm:px-6 lg:px-8">
           <ScrollReveal>
-            <QuoteBlock
-              quote="Auch der weiteste Weg beginnt mit einem ersten Schritt."
-              cite="Konfuzius"
-            />
-            <p className="mt-8 text-center text-base leading-relaxed text-ink-soft">
-              Jeder Mensch lernt anders – so einzigartig wie ein Fingerabdruck.{" "}
-              <Link href="/ueber-mich/philosophie" className="font-semibold text-petrol underline">
-                Mehr zur Philosophie
-              </Link>
+            <svg width="36" height="28" viewBox="0 0 36 28" aria-hidden="true" className="mx-auto mb-6 text-terracotta-light">
+              <path
+                d="M0 28V16.6C0 7.6 5.4 1.7 14.6 0l1.7 4.9C10 6.6 7.4 10 7.4 14.4h7.2V28H0Zm19.8 0V16.6c0-9 5.4-14.9 14.6-16.6l1.6 4.9c-6.2 1.7-8.8 5.1-8.8 9.5h7.2V28H19.8Z"
+                fill="currentColor"
+              />
+            </svg>
+            <p className="font-display text-3xl leading-snug text-canvas italic sm:text-4xl">
+              Auch der weiteste Weg beginnt mit einem ersten Schritt.
             </p>
+            <p className="mt-4 font-mono text-xs uppercase tracking-[0.16em] text-canvas/60">
+              — Konfuzius
+            </p>
+            <p className="mx-auto mt-10 max-w-xl text-base leading-relaxed text-canvas/80">
+              Jeder Mensch lernt anders – so einzigartig wie ein Fingerabdruck.
+            </p>
+            <ArrowLink href="/ueber-mich/philosophie" tone="onDark" className="mx-auto mt-5">
+              Mehr zur Philosophie
+            </ArrowLink>
           </ScrollReveal>
         </div>
       </section>

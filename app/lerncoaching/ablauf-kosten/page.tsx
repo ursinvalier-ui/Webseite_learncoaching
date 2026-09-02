@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
+import { Eyebrow } from "@/components/Eyebrow";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { PricingCard } from "@/components/PricingCard";
@@ -43,9 +44,7 @@ export default function AblaufKostenPage() {
       <section className="bg-canvas">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
-              Ablauf Lerncoaching
-            </p>
+            <Eyebrow>Ablauf Lerncoaching</Eyebrow>
             <h2 className="text-3xl sm:text-4xl">Schritt für Schritt zum Ziel</h2>
           </div>
           <div className="mt-12">
@@ -57,9 +56,7 @@ export default function AblaufKostenPage() {
       <section className="bg-canvas-alt">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
-              Der Unterschied
-            </p>
+            <Eyebrow>Der Unterschied</Eyebrow>
             <h2 className="text-3xl sm:text-4xl">Unterschied zur Nachhilfe</h2>
             <p className="mt-4 text-base leading-relaxed text-ink-soft">
               Im Lerncoaching geht es darum, die Ursachen von Lernschwierigkeiten zu erkennen und
@@ -93,9 +90,7 @@ export default function AblaufKostenPage() {
       <section className="bg-canvas">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
-              Konditionen
-            </p>
+            <Eyebrow>Konditionen</Eyebrow>
             <h2 className="text-3xl sm:text-4xl">Transparent und ohne Überraschungen</h2>
           </div>
           <div className="mt-10 max-w-md">

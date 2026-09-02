@@ -1,5 +1,6 @@
 "use client";
 
+import { Eyebrow } from "@/components/Eyebrow";
 import { IconCheck } from "@/components/icons";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useInView } from "@/components/illustrations/useInView";
@@ -27,11 +28,7 @@ export function TopicList({
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         {(eyebrow || title) && (
           <ScrollReveal className="mb-10 max-w-2xl">
-            {eyebrow && (
-              <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
-                {eyebrow}
-              </p>
-            )}
+            {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
             {title && <h2 className="text-3xl sm:text-4xl">{title}</h2>}
           </ScrollReveal>
         )}

@@ -132,7 +132,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-full bg-petrol px-6 py-3.5 text-base font-semibold text-canvas shadow-soft transition-colors hover:bg-petrol-strong disabled:opacity-60 sm:w-auto"
+        className="w-full rounded-button bg-petrol px-6 py-3.5 text-base font-semibold text-canvas transition-colors hover:bg-petrol-strong disabled:opacity-60 sm:w-auto"
       >
         {status === "submitting" ? "Wird gesendet…" : "Unverbindlich Kontakt aufnehmen"}
       </button>

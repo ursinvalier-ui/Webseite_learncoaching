@@ -127,7 +127,7 @@ export default function WorkshopPage() {
           </ul>
           <a
             href={mailtoHref}
-            className="mt-8 inline-flex items-center justify-center rounded-full bg-petrol px-6 py-3.5 text-base font-semibold text-canvas shadow-soft transition-colors hover:bg-petrol-strong"
+            className="mt-8 inline-flex items-center justify-center rounded-button bg-petrol px-6 py-3.5 text-base font-semibold text-canvas transition-colors hover:bg-petrol-strong"
           >
             Workshop anfragen / anmelden
           </a>

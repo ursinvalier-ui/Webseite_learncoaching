@@ -57,13 +57,14 @@ function svg({ id, w, h, icon, seedA, seedB, label }) {
 </svg>`;
 }
 
-// Only the hero still needs a generated placeholder — the portrait is a
-// real photo now (public/images/portrait-seraina.webp, see MEDIA.md), and
-// every thematic content page (Hausaufgaben, Prüfungsangst, Lernstrategie,
-// Workshop, Vortrag, Philosophie …) uses a custom illustration from
-// components/illustrations/ instead of a photo.
+// The homepage hero no longer uses a photo placeholder — it uses the
+// PenSignature component (components/PenSignature.tsx) instead. The
+// portrait is a real photo (public/images/portrait-seraina.webp, see
+// MEDIA.md), and every thematic content page (Hausaufgaben, Prüfungsangst,
+// Lernstrategie, Workshop, Vortrag, Philosophie …) uses a custom
+// illustration from components/illustrations/ instead of a photo. Only the
+// social-share image still needs a generated placeholder.
 const items = [
-  { file: "hero-home", w: 1600, h: 1000, icon: ICONS.path, a: palette.petrol, b: palette.sageDark, label: "Platzhalter · Titelbild ergänzen" },
   { file: "og-default", w: 1200, h: 630, icon: ICONS.path, a: palette.petrol, b: palette.sageDark, label: "Lerncoaching Engeli" },
 ];
 

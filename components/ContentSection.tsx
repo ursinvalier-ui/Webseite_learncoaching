@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
+import { Eyebrow } from "@/components/Eyebrow";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 type ContentSectionProps = {
@@ -32,11 +33,7 @@ export function ContentSection({
           className={`grid gap-10 lg:gap-16 ${hasVisual ? "lg:grid-cols-2 lg:items-center" : ""}`}
         >
           <ScrollReveal className={hasVisual && imageSide === "left" ? "lg:order-2" : ""}>
-            {eyebrow && (
-              <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-sage-dark">
-                {eyebrow}
-              </p>
-            )}
+            {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
             {title && <h2 className="text-3xl sm:text-4xl">{title}</h2>}
             <div className="prose-content mt-5 max-w-2xl space-y-4 text-base leading-relaxed text-ink-soft">
               {children}

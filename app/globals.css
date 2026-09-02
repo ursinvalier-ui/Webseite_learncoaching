@@ -24,10 +24,13 @@
   --color-terracotta-text: #8a4520; /* terracotta usable as small text on canvas/surface, 5.9–6.6:1 */
   --color-terracotta-light: #e3a272; /* terracotta usable as text on plum/dark backgrounds, 6.19:1 */
 
-  --font-display: "Fraunces", "Iowan Old Style", ui-serif, Georgia, serif;
-  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Instrument Serif", "Iowan Old Style", ui-serif, Georgia, serif;
+  --font-body: "Karla", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-hand: "Caveat", cursive;
 
-  --radius-card: 1.25rem;
+  --radius-card: 0.75rem;
+  --radius-button: 0.4rem;
   --radius-pill: 999px;
 
   --shadow-soft: 0 2px 24px -6px rgba(74, 30, 69, 0.14);
@@ -57,7 +60,7 @@
   h4 {
     font-family: var(--font-display);
     color: var(--color-petrol);
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: -0.01em;
   }
 

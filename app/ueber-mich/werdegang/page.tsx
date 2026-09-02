@@ -95,7 +95,7 @@ export default function WerdegangPage() {
                   )}
                 </div>
                 <div>
-                  <p className="font-display text-sm font-semibold uppercase tracking-wide text-sage-dark">
+                  <p className="font-mono text-xs uppercase tracking-[0.14em] text-terracotta-text">
                     {milestone.year}
                   </p>
                   <p className="mt-1.5 text-base leading-relaxed text-ink-soft">{milestone.text}</p>

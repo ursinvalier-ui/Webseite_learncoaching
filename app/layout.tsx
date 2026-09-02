@@ -1,20 +1,35 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Instrument_Serif, Karla, IBM_Plex_Mono, Caveat } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { siteConfig } from "@/lib/site-config";
 
-const fraunces = Fraunces({
+const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
   variable: "--font-display",
   display: "swap",
-  axes: ["opsz", "SOFT", "WONK"],
 });
 
-const inter = Inter({
+const karla = Karla({
   subsets: ["latin"],
   variable: "--font-body",
+  display: "swap",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-hand",
   display: "swap",
 });
 
@@ -89,7 +104,7 @@ export default function RootLayout({
   return (
     <html lang="de-CH">
       <body
-        className={`${fraunces.variable} ${inter.variable} font-body text-ink antialiased`}
+        className={`${instrumentSerif.variable} ${karla.variable} ${plexMono.variable} ${caveat.variable} font-body text-ink antialiased`}
       >
         <a href="#main-content" className="skip-link">
           Zum Inhalt springen

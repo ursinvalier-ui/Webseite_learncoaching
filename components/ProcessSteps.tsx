@@ -17,7 +17,7 @@ export function ProcessSteps({ steps }: { steps: Step[] }) {
           <li key={step.title} className="relative flex gap-4 lg:flex-col lg:gap-3">
             <div className="flex flex-col items-center">
               <span
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-petrol font-display text-sm font-semibold text-canvas"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-petrol font-mono text-sm text-canvas"
                 style={{
                   transition: `transform 0.5s cubic-bezier(0.34,1.56,0.64,1) ${delay}ms, opacity 0.4s ease ${delay}ms`,
                   transform: inView ? "scale(1)" : "scale(0.4)",
@@ -44,7 +44,7 @@ export function ProcessSteps({ steps }: { steps: Step[] }) {
                 transform: inView ? "translateY(0)" : "translateY(6px)",
               }}
             >
-              <p className="font-display text-base font-semibold text-petrol">{step.title}</p>
+              <p className="font-display text-lg text-petrol">{step.title}</p>
               {step.description && (
                 <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{step.description}</p>
               )}

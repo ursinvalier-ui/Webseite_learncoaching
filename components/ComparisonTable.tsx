@@ -11,14 +11,12 @@ export function ComparisonTable({ columns }: { columns: [Column, Column] }) {
         <div
           key={col.title}
           className={`rounded-card border p-7 ${
-            index === 1
-              ? "border-petrol bg-petrol text-canvas shadow-soft-lg"
-              : "border-line bg-surface"
+            index === 1 ? "border-petrol bg-petrol text-canvas" : "border-line bg-surface"
           }`}
         >
           <h3 className={`text-xl ${index === 1 ? "text-canvas" : ""}`}>{col.title}</h3>
           <p
-            className={`mt-2 text-sm font-semibold ${
+            className={`mt-2 font-mono text-xs uppercase tracking-wide ${
               index === 1 ? "text-terracotta-light" : "text-terracotta-text"
             }`}
           >

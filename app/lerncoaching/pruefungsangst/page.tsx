@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { ContentSection } from "@/components/ContentSection";
+import { Eyebrow } from "@/components/Eyebrow";
 import { QuoteBlock } from "@/components/QuoteBlock";
 import { TopicList } from "@/components/TopicList";
 import { CTASection } from "@/components/CTASection";
@@ -49,9 +50,7 @@ export default function PruefungsangstPage() {
 
       <section className="bg-canvas-alt">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <p className="mb-6 text-sm font-semibold uppercase tracking-wide text-sage-dark">
-            Aus eigener Erfahrung
-          </p>
+          <Eyebrow>Aus eigener Erfahrung</Eyebrow>
           <QuoteBlock
             quote="Schon beim Ansagen eines Mathetests bekam ich Herzklopfen, und negative Gedanken schossen mir durch den Kopf. Selbst wenn die Prüfung besser ausfiel als erwartet, änderte dies nichts an meiner Prüfungsangst."
             cite="Seraina Engeli, über ihre eigene Prüfungsangst im Lehrerseminar"

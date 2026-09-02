@@ -9,13 +9,20 @@ Hausaufgaben, Prüfungsangst, Lernstrategien, Workshop, Vortrag, Philosophie) �
 
 | Datei | Verwendet auf | Status |
 |---|---|---|
-| `hero-home.webp` | Startseite, Hero | ⏳ **generierte Platzhalter-Grafik** — ursprüngliche Quelle war `181112-cw-headerbild-adobestock_137250354-1920x1080-q82.jpg`; ⚠️ Dateiname enthält "adobestock" — **Lizenz vor Verwendung prüfen**, falls dieses Originalbild doch verwendet werden soll |
 | `portrait-seraina.webp` | Startseite ("Über mich") & Seite "Werdegang" | ✅ **echtes Foto eingesetzt** (von dir per GitHub-Upload bereitgestellt, optimiert als WebP) |
 | `og-default.jpg` | Social-Media-Vorschaubild (OpenGraph) | generierte Grafik, optional gegen ein echtes Foto/Logo-Motiv austauschbar |
 
-Neu generieren (nur noch für `hero-home` / `og-default` relevant):
-`npm run generate:placeholders` (schreibt die `.svg`-Quellen; die im Code verwendeten
-`.webp`-Dateien danach z.B. mit `sharp` neu rendern).
+Der Startseiten-Hero verwendet kein Foto mehr, sondern die `PenSignature`-
+Komponente (`components/PenSignature.tsx`, siehe auch `ILLUSTRATIONS.md`) —
+ein handgeschriebenes "Engeli" auf liniertem Papier, animiert von einem
+gezeichneten Stift. Die ursprüngliche `hero-home.webp`-Platzhaltergrafik
+(Quelle war `181112-cw-headerbild-adobestock_137250354-1920x1080-q82.jpg`,
+Dateiname mit "adobestock" — Lizenz wäre vor Verwendung zu prüfen gewesen)
+wurde entfernt.
+
+Neu generieren (nur noch für `og-default` relevant):
+`npm run generate:placeholders` (schreibt die `.svg`-Quelle; die im Code
+verwendete `.webp`-Datei danach z.B. mit `sharp` neu rendern).
 
 Alle thematischen Seiten (Hausaufgaben Kinder/Jugendliche, Prüfungsangst,
 Lernstrategien, Workshop, Vortrag, Philosophie) verwenden **Illustrationen statt

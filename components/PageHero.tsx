@@ -1,4 +1,5 @@
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
+import { Eyebrow } from "@/components/Eyebrow";
 import { siteConfig } from "@/lib/site-config";
 
 type PageHeroProps = {
@@ -28,11 +29,7 @@ export function PageHero({ eyebrow, title, description, crumbs }: PageHeroProps)
       />
       <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
         <Breadcrumbs crumbs={crumbs} />
-        {eyebrow && (
-          <p className="mb-3 mt-6 text-sm font-semibold uppercase tracking-wide text-sage-dark">
-            {eyebrow}
-          </p>
-        )}
+        <div className={eyebrow ? "mt-6" : ""}>{eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}</div>
         <h1 className={`text-4xl sm:text-5xl ${eyebrow ? "" : "mt-6"}`}>{title}</h1>
         {description && (
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">{description}</p>

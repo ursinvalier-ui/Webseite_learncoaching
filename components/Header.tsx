@@ -115,7 +115,7 @@ export function Header() {
         <div className="hidden lg:block">
           <Link
             href="/ueber-uns/kontakt"
-            className="rounded-full bg-petrol px-5 py-2.5 text-sm font-semibold text-canvas shadow-soft transition-colors hover:bg-petrol-strong"
+            className="rounded-button bg-petrol px-5 py-2.5 text-sm font-semibold text-canvas transition-colors hover:bg-petrol-strong"
           >
             Kontakt aufnehmen
           </Link>
@@ -175,7 +175,7 @@ export function Header() {
           ))}
           <Link
             href="/ueber-uns/kontakt"
-            className="mt-4 block rounded-full bg-petrol px-5 py-3 text-center text-sm font-semibold text-canvas"
+            className="mt-4 block rounded-button bg-petrol px-5 py-3 text-center text-sm font-semibold text-canvas"
           >
             Kontakt aufnehmen
           </Link>

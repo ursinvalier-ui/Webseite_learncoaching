@@ -49,6 +49,16 @@ sofort vollständig sichtbar, ohne Animation.
 direkt animiert: Verbindungslinien zeichnen sich, Kreise "poppen" ein, Häkchen
 erscheinen versetzt.
 
+## Die Signatur: `PenSignature`
+
+`components/PenSignature.tsx` ist das eine bewusst auffällige Element der Website
+(siehe Startseiten-Hero): ein gezeichneter Stift schreibt handschriftlich "Engeli" —
+den Nachnamen aus dem echten Logo-Schriftzug (`Logo.tsx`) — auf liniertes Papier,
+hält kurz, verblasst, und beginnt erneut. Läuft per `requestAnimationFrame`, startet
+erst wenn die Komponente im Sichtbereich ist (`useInView`), und respektiert
+`prefers-reduced-motion`: Ist reduzierte Bewegung aktiviert, erscheint sofort das
+fertig geschriebene Wort ohne Animation. Schrift: `Caveat` (`--font-hand`).
+
 ## Zentraler Style-Prompt (Fallback für spätere KI-/Illustrator-Beauftragung)
 
 Falls später doch echte KI-generierte oder von einer Illustratorin beauftragte Bilder
