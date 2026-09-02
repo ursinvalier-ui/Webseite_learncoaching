@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { ArrowLink } from "@/components/ArrowLink";
 import { Eyebrow } from "@/components/Eyebrow";
 import { Hero } from "@/components/Hero";
+import { IntroCurtain } from "@/components/IntroCurtain";
 import { ServiceCard } from "@/components/ServiceCard";
 import { CTASection } from "@/components/CTASection";
 import { ComparisonTable } from "@/components/ComparisonTable";
@@ -74,6 +75,7 @@ const steps = [
 export default function HomePage() {
   return (
     <>
+      <IntroCurtain />
       <Hero
         eyebrow="Lerncoaching in Chur"
         title="Lernen darf leichter werden."
